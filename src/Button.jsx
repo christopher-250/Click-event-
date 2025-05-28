@@ -1,18 +1,9 @@
 function Button(){
 
-    let count = 0;
-    const handlerClick2 = (name) => {
-        if(count < 3){
-            count ++;
-            console.log(`${name} you clicked me ${count} time/s`);
-        }
-        else{
-            console.log(`Stop clicking me`);
-        }
-    };
+  const handleClick = (e) => e.target.textContent = "Ooh shit";
     
 
-    return(<button onClick ={() => handlerClick2("Chris")}>Click me</button>);
+    return(<button onDoubleClick ={(e) => handleClick(e)}>Click me</button>);
 
 }
 export default Button
